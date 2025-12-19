@@ -1,9 +1,20 @@
-variable "github_token" {
-  description = "GitHub Personal Access Token"
-  type        = string
-  sensitive   = true
+variable "aws_region" {
+  default = "ap-south-1"
 }
 
-variable "repo_name" {
-  default = "terraform-aman-public-repo"
+variable "instance_type" {
+  default = "t2.micro"
+}
+
+variable "ami_id" {
+  default = "ami-0f5ee92e2d63afc18" # Ubuntu 22.04 Mumbai
+}
+
+variable "allowed_ports" {
+  type    = list(number)
+  default = [22, 80, 443]
+}
+
+variable "key_name" {
+  description = "AWS Key Pair Name"
 }
