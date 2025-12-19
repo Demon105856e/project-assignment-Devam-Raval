@@ -4,7 +4,7 @@ resource "aws_instance" "nginx_server" {
 
   subnet_id              = aws_subnet.public_subnet.id
   vpc_security_group_ids = [aws_security_group.nginx_sg.id]
-  key_name               = aws_key_pair.ec2_keypair.key_name
+  key_name = var.key_name
 
   root_block_device {
     volume_size = 30
