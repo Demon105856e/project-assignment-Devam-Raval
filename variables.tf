@@ -16,5 +16,5 @@ variable "allowed_ports" {
 }
 
 variable "key_name" {
-  description = "AWS Key Pair Name"
+  description = "exam-q3"
 }
